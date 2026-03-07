@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
@@ -9,19 +8,17 @@
 
     <title>TaskFlow - Gestor de Tareas</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Fuente moderna -->
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- Librería Luxon -->
-
     <script src="https://cdn.jsdelivr.net/npm/luxon@3/build/global/luxon.min.js"></script>
 
     <!-- Script principal -->
-
-    <script defer type="module" src="./assets/js/script.js"></script>
+    <script defer type="module" src="assets/js/script.js"></script>
 
 </head>
 
@@ -42,16 +39,17 @@
 
             <form id="formulario">
 
-                <input type="text" id="tarea" placeholder="Descripción de la tarea" required>
+                <label for="tarea">Descripción de la tarea</label>
+                <input type="text" id="tarea" name="tarea" placeholder="Descripción de la tarea" required>
 
-                <input type="date" id="fecha-vencimiento">
+                <label for="fecha-vencimiento">Fecha de vencimiento</label>
+                <input type="date" id="fecha-vencimiento" name="fecha">
 
-                <select id="prioridad-tarea">
-
+                <label for="prioridad-tarea">Prioridad</label>
+                <select id="prioridad-tarea" name="prioridad">
                     <option value="baja">Prioridad baja</option>
                     <option value="media">Prioridad media</option>
                     <option value="alta">Prioridad alta</option>
-
                 </select>
 
                 <button type="submit">Agregar tarea</button>
@@ -72,7 +70,7 @@
 
             <p>Tareas pendientes: <span id="tareas-pendientes">0</span></p>
 
-            <label>Progreso</label>
+            <label for="progreso">Progreso</label>
 
             <progress id="progreso" value="0" max="100"></progress>
 
