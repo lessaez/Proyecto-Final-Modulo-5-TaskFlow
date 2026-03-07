@@ -1,15 +1,28 @@
-import { DateTime } from 'luxon'; // Importar la librería Luxon
+const { DateTime } = luxon;
 
-// Función para formatear una fecha en un formato más legible
-export function formatearFecha(fecha) {
-  const fechaLuxon = DateTime.fromISO(fecha); // Convierte la fecha a un objeto de Luxon
-  return fechaLuxon.toFormat('dd-MM-yyyy'); // Devuelve la fecha en formato 'dd-MM-yyyy'
+export function formatearFecha(fecha){
+
+if(!fecha) return "";
+
+return DateTime.fromISO(fecha).toFormat("dd/MM/yyyy");
+
 }
 
-// Función para calcular el tiempo restante hasta una fecha de vencimiento
-export function calcularTiempoRestante(fecha) {
-  const fechaLuxon = DateTime.fromISO(fecha); // Convierte la fecha a un objeto de Luxon
-  const ahora = DateTime.now(); // Obtiene la fecha y hora actuales
-  const diferencia = fechaLuxon.diff(ahora, ['days', 'hours', 'minutes']); // Calcula la diferencia
-  return diferencia.toObject(); // Devuelve la diferencia en un objeto
+export function diasRestantes(fecha){
+
+if(!fecha) return "";
+
+const hoy = DateTime.now();
+const limite = DateTime.fromISO(fecha);
+
+const diff = limite.diff(hoy,"days").days;
+
+if(diff < 0){
+
+return "Tarea vencida";
+
+}
+
+return Math.ceil(diff) + " días";
+
 }

@@ -1,240 +1,302 @@
-/* Estilos globales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f7fb;
-    color: #333;
+
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    height: 100vh;
-    margin: 0;
-    padding: 10px;
+    align-items: center;
+    padding: 40px;
+
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 5px;
+header {
+
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+header h1 {
+
+    font-size: 3rem;
+    font-weight: 700;
+    color: #444;
+    animation: float 3s ease-in-out infinite;
+
+}
+
+.subtitulo {
+
+    font-size: 1.2rem;
+    color: #666;
+
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+main {
+
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 750px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
 }
 
 h2 {
-    color: #34495e;
-}
 
-header,
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #3498db;
-    color: white;
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-footer {
-    font-size: 0.9rem;
-}
-
-/* Formulario */
-#formulario-tarea {
-    margin-top: 30px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-}
-
-.form-group {
     margin-bottom: 15px;
+    color: #555;
+
 }
 
-#formulario label {
-    font-size: 1rem;
-    margin-bottom: 8px;
+form {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+
 }
 
-#formulario input,
-#formulario select {
-    width: 100%;
+input,
+select {
+
     padding: 12px;
-    margin-bottom: 20px;
+    border-radius: 8px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #f8f9fa;
+    flex: 1;
+
 }
 
-#formulario button {
-    padding: 12px 20px;
-    background-color: #3498db;
-    color: white;
+form button {
+
+    background: #6ec6ca;
     border: none;
-    border-radius: 5px;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
+
 }
 
-#formulario button:hover {
-    background-color: #2980b9;
+form button:hover {
+
+    background: #4fb3b8;
+
 }
 
-/* Filtro y Orden de Tareas */
-#filtro-ordenar {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    width: 100%;
-    max-width: 500px;
-}
+ul {
 
-#filtro,
-#ordenar {
-    display: flex;
-    align-items: center;
-}
-
-#filtro label,
-#ordenar label {
-    font-size: 1rem;
-    margin-right: 10px;
-}
-
-/* Lista de tareas */
-#tareas {
-    margin-top: 30px;
-    width: 100%;
-    max-width: 500px;
-}
-
-#lista-tareas {
     list-style: none;
-    padding: 0;
+
 }
 
-#lista-tareas li {
-    background-color: white;
+li {
+
+    background: #f9fafc;
     padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border-left: 6px solid #6ec6ca;
+    transition: 0.2s;
+
 }
 
-#lista-tareas li:hover {
-    background-color: #ecf0f1;
+li:hover {
+
+    transform: scale(1.02);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+
 }
 
-button {
-    background-color: #2ecc71;
-    color: white;
+/* prioridades */
+
+.prioridad-alta {
+
+    border-left: 6px solid #ff7675;
+
+}
+
+.prioridad-media {
+
+    border-left: 6px solid #feca57;
+
+}
+
+.prioridad-baja {
+
+    border-left: 6px solid #55efc4;
+
+}
+
+/* botones */
+
+li button {
+
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 6px 12px;
     border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
+
 }
 
-button:hover {
-    background-color: #27ae60;
+.btn-completar {
+
+    background: #55efc4;
+
 }
 
-button.delete {
-    background-color: #e74c3c;
-}
+.btn-eliminar {
 
-button.delete:hover {
-    background-color: #c0392b;
-}
-
-/* Barra de progreso */
-#barra-progreso {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 500px;
-}
-
-/* Notificaciones */
-#notification {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #2ecc71;
+    background: #ff7675;
     color: white;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 1rem;
-    display: none;
-    z-index: 10;
-    animation: fadeIn 0.5s ease, fadeOut 2s ease 2s;
+
 }
 
-#notification.hidden {
-    display: none;
+/* tarea completada */
+
+.tarea-completada {
+
+    text-decoration: line-through;
+    opacity: 0.6;
+
 }
 
-#notification.error {
-    background-color: #e74c3c;
+/* progreso */
+
+progress {
+
+    width: 100%;
+    height: 18px;
+    margin-top: 10px;
+
 }
 
-#notification.success {
-    background-color: #2ecc71;
+/* footer */
+
+.footer {
+
+    margin-top: 30px;
+    text-align: center;
+    color: #555;
+
 }
 
-/* Animación de aparición/desaparición */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        top: 0;
-    }
+.footer .autor {
 
-    100% {
-        opacity: 1;
-        top: 20px;
-    }
+    font-size: 0.8rem;
+    margin-top: 5px;
+
 }
 
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-        top: 20px;
-    }
+/* DARK MODE AUTOMATICO */
 
-    100% {
-        opacity: 0;
-        top: 0;
-    }
-}
+@media (prefers-color-scheme: dark) {
 
-/* Mejoras para dispositivos móviles */
-@media (max-width: 768px) {
     body {
-        padding: 10px;
+
+        background: linear-gradient(135deg, #1e272e, #2f3640);
+        color: #eee;
+
     }
 
-    #formulario-tarea,
-    #filtro-ordenar,
-    #tareas {
-        width: 100%;
-        max-width: 100%;
+    main {
+
+        background: #2f3640;
+        color: #eee;
+
     }
 
-    button {
-        width: 100%;
-        padding: 14px;
+    header h1 {
+
+        color: #f5f6fa;
+
     }
+
+    .subtitulo {
+
+        color: #dcdde1;
+
+    }
+
+    h2 {
+
+        color: #f5f6fa;
+
+    }
+
+    input,
+    select {
+
+        background: #353b48;
+        color: #eee;
+        border: 1px solid #555;
+
+    }
+
+    li {
+
+        background: #353b48;
+        color: #eee;
+
+    }
+
+    .footer {
+
+        color: #ccc;
+
+    }
+
+}
+
+/* ICONO CHECK ANIMADO */
+
+.check {
+
+    color: #55efc4;
+    display: inline-block;
+    animation: latido 1.5s infinite;
+
+}
+
+@keyframes latido {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
 }
