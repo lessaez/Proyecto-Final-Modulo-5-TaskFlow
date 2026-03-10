@@ -24,6 +24,11 @@
 
 <body>
 
+    <div id="clima-box">
+        <h3>Clima actual</h3>
+        <p id="clima-info">Cargando clima...</p>
+    </div>
+
     <header>
 
         <h1>TaskFlow <span class="check">✔</span></h1>
@@ -35,7 +40,7 @@
 
         <section>
 
-            <h2>Nueva tarea</h2>
+            <h2>Nueva tarea 🗒️</h2>
 
             <form id="formulario">
 
@@ -70,9 +75,10 @@
 
             <p>Tareas pendientes: <span id="tareas-pendientes">0</span></p>
 
-            <label for="progreso">Progreso</label>
-
-            <progress id="progreso" value="0" max="100"></progress>
+            <div class="barra-progreso">
+                <div id="barra-avance"></div>
+            </div>
+            <p id="texto-progreso"></p>
 
         </section>
 
