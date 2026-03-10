@@ -1,6 +1,7 @@
 import { Tarea } from "./classes/Tarea.js";
 import { GestorTareas } from "./classes/GestorTareas.js";
 import { formatearFecha, diasRestantes } from "./classes/fechas-luxon.js";
+import { Wheater } from "./classes/Weather.js";
 
 /* ---------- VERSION DE DATOS ---------- */
 
@@ -193,35 +194,3 @@ function render() {
 
 }
 
-async function obtenerClima(){
-
-const apiKey = "TU_API_KEY";
-const ciudad = "Santiago";
-
-const url =
-`https://api.openweathermap.org/data/2.5/weather?q=${ciudad},CL&appid=${apiKey}&units=metric&lang=es`;
-
-try{
-
-const res = await fetch(url);
-const data = await res.json();
-
-const temperatura = data.main.temp;
-const descripcion = data.weather[0].description;
-
-document.getElementById("clima-info").textContent =
-`En ${ciudad} hay ${temperatura}°C con ${descripcion}`;
-
-}
-catch(error){
-
-document.getElementById("clima-info").textContent =
-"No se pudo cargar el clima";
-
-console.error(error);
-
-}
-
-}
-
-obtenerClima();
