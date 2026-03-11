@@ -323,3 +323,87 @@ progress {
     border-radius: 6px;
     margin-bottom: 15px;
 }
+
+/* ======= ZONA SUPERIOR (Clima) ======= */
+
+#clima {
+    background: linear-gradient(90deg, #1e293b, #0f172a);
+    color: #ffffff;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#clima h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+#clima-info {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* ======= HEADER MEJORADO ======= */
+
+header {
+    text-align: center;
+    padding: 30px 15px 10px 15px;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+/* ======= HORA ACTUAL ======= */
+
+#hora-actual {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+/* ======= FRASE MOTIVACIONAL ======= */
+
+#frase-motivacional {
+    margin-top: 12px;
+    font-size: 16px;
+    font-style: italic;
+    color: #cbd5e1;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    padding: 10px 15px;
+    border-left: 3px solid #38bdf8;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+}
+
+/* ======= ICONOS Y DETALLES ======= */
+
+.check {
+    color: #38d39f;
+}
+
+/* ======= TRANSICIONES SUAVES ======= */
+
+#clima,
+#frase-motivacional {
+    transition: all 0.3s ease;
+}

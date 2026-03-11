@@ -24,6 +24,10 @@
 
 <body>
 
+    <!-- Contenedor para notificaciones visuales -->
+    <div id="notificaciones-app" aria-live="polite"></div>
+
+    <!-- CLIMA -->
     <div id="clima">
         <h3>Clima actual</h3>
         <p id="clima-info">Cargando clima...</p>
@@ -33,6 +37,10 @@
 
         <h1>TaskFlow <span class="check">✔</span></h1>
         <p class="subtitulo">Gestor de tareas</p>
+
+        <!-- HORA Y FRASE -->
+        <div id="hora-actual"></div>
+        <div id="frase-motivacional"></div>
 
     </header>
 
@@ -45,7 +53,8 @@
             <form id="formulario">
 
                 <label for="tarea">Descripción de la tarea</label>
-                <input type="text" id="tarea" name="tarea" placeholder="Descripción de la tarea" required>
+                <input type="text" id="tarea" name="tarea" placeholder="Descripción de la tarea" required
+                    autocomplete="off">
 
                 <label for="fecha-vencimiento">Fecha de vencimiento</label>
                 <input type="date" id="fecha-vencimiento" name="fecha">
@@ -90,6 +99,13 @@
         <p class="autor">Proyecto Front-End | 2026</p>
 
     </footer>
+
+    <!-- Mensaje para usuarios sin JS -->
+    <noscript>
+        <p style="text-align:center; padding:10px;">
+            Esta aplicación necesita JavaScript para funcionar correctamente.
+        </p>
+    </noscript>
 
 </body>
 

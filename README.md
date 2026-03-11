@@ -1,44 +1,101 @@
-# TaskFlow - Gestor de Tareas
+📌 TaskFlow — Gestor de Tareas Inteligente
 
-Proyecto Final del Módulo 5.
+Proyecto Final — Módulo 5
 
-TaskFlow es una aplicación web que permite gestionar tareas de forma simple e interactiva. Fue desarrollada utilizando JavaScript, aplicando conceptos como programación orientada a objetos, manipulación del DOM y uso de librerías externas para el manejo de fechas.
+TaskFlow es una aplicación web interactiva que permite gestionar tareas de manera eficiente, combinando herramientas modernas del desarrollo Front-End como Programación Orientada a Objetos, módulos ES6, consumo de APIs externas y manipulación dinámica del DOM para ofrecer una experiencia fluida al usuario.
 
-## Tecnologías utilizadas
+🚀 Tecnologías Utilizadas
 
-* HTML
-* CSS
-* JavaScript
-* Luxon (librería para manejo de fechas)
+- HTML5
 
-## Funcionalidades
+- CSS3
 
-* Crear nuevas tareas
-* Visualizar tareas en la interfaz
-* Marcar tareas como completadas
-* Eliminar tareas
-* Gestión dinámica de tareas mediante JavaScript
+- JavaScript ES6
 
-## Estructura del proyecto
+- Librería Luxon para manejo avanzado de fechas
 
-El proyecto está organizado de la siguiente manera:
+- API externa OpenWeather para clima en tiempo real
 
-* **assets/**: contiene los archivos CSS y JavaScript de la aplicación.
-* **capturas/**: incluye imágenes que muestran el funcionamiento del proyecto.
-* **index.html**: archivo principal de la aplicación.
-* **Analisis del Proyecto.pdf**: documento que explica el análisis y desarrollo del proyecto.
-* **package.json**: archivo de configuración del proyecto y dependencias.
+✨ Funcionalidades Principales
+🗂️ Gestión de tareas
 
-## Capturas del proyecto
+- Crear nuevas tareas con descripción, fecha de vencimiento y prioridad
 
-Las imágenes del funcionamiento de la aplicación se encuentran en la carpeta **capturas** dentro del repositorio.
+- Visualizar tareas dinámicamente en la interfaz
 
-## Cómo ejecutar el proyecto
+- Marcar tareas como completadas
 
-1. Descargar o clonar el repositorio.
-2. Abrir la carpeta del proyecto.
-3. Abrir el archivo **index.html** en un navegador web.
+- Eliminar tareas
 
-## Autor
+- Cálculo automático de días restantes
 
-Proyecto desarrollado como parte del Proyecto Final del Módulo 5.
+- Indicador visual de tareas completadas
+
+- Barra de progreso dinámica
+
+- Persistencia de datos mediante LocalStorage
+
+🎨 Experiencia de usuario
+
+- Notificaciones visuales interactivas
+
+- Interfaz moderna y adaptable
+
+- Diseño limpio y organizado
+
+🌐 Integración de APIs externas
+
+- Visualización del clima actual en tiempo real
+
+- Reloj dinámico con hora actual del sistema
+
+- Frases motivacionales dinámicas para mejorar la productividad
+
+🧠 Conceptos de Programación Aplicados
+
+- Programación Orientada a Objetos (POO)
+
+- Organización modular con Módulos ES6
+
+- Manipulación dinámica del DOM
+
+- Programación asíncrona con async/await
+
+- Consumo de APIs externas mediante fetch
+
+- Manejo de eventos del usuario
+
+- Persistencia de datos en el navegador
+
+📁 Estructura del Proyecto
+assets/
+├── css/
+│ └── style.css
+└── js/
+├── classes/
+│ ├── Tarea.js
+│ ├── GestorTareas.js
+│ └── fechas-luxon.js
+├── api/
+│ └── Weather.js
+└── script.js
+
+capturas/
+index.html
+Analisis del Proyecto.pdf
+
+📸 Capturas del Proyecto: Las imágenes del funcionamiento de la aplicación se encuentran en la carpeta capturas dentro del repositorio.
+
+▶️ Cómo Ejecutar el Proyecto
+
+- Descargar o clonar el repositorio.
+
+- Abrir la carpeta del proyecto.
+
+- Ejecutar el archivo index.html en un navegador web moderno.
+
+- Se recomienda usar la extensión Live Server para mejor funcionamiento.
+
+🎓 Descripción Académica
+
+Este proyecto demuestra la aplicación práctica de los contenidos del módulo, integrando desarrollo front-end moderno, organización modular del código y consumo de servicios externos para enriquecer la experiencia del usuario.
