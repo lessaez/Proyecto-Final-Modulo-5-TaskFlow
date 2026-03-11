@@ -407,3 +407,34 @@ header h1 {
 #frase-motivacional {
     transition: all 0.3s ease;
 }
+
+/* ===== MEJORAS VISIBILIDAD EN MÓVIL ===== */
+
+#hora-actual {
+    color: #1f2937;
+    /* gris oscuro elegante */
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+#frase-motivacional {
+    color: #0f172a;
+    /* azul muy oscuro */
+    background: rgba(255, 255, 255, 0.65);
+    border-left: 4px solid #38bdf8;
+    font-weight: 500;
+}
+
+/* Mejora contraste en pantallas pequeñas */
+@media (max-width: 600px) {
+
+    #hora-actual {
+        font-size: 15px;
+    }
+
+    #frase-motivacional {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+}

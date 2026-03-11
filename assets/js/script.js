@@ -2,7 +2,7 @@ import { Tarea } from "./classes/Tarea.js";
 import { GestorTareas } from "./classes/GestorTareas.js";
 import { formatearFecha, diasRestantes } from "./classes/fechas-luxon.js";
 import getWeather from "./api/Weather.js";
-import getQuote from "./api/Quotes.js";   // ← corregido (era Quote.js)
+import getQuote from "./api/Quotes.js";  
 import getTime from "./api/Time.js";
 
 /* ---------- VERSION DE DATOS ---------- */
@@ -32,8 +32,6 @@ const pendientes = document.getElementById("tareas-pendientes");
 
 const barra = document.getElementById("barra-avance");
 const textoProgreso = document.getElementById("texto-progreso");
-
-/* ---------- MEJORAS UX ---------- */
 
 // Notificación visual
 function mostrarNotificacion(mensaje, tipo = "ok") {
